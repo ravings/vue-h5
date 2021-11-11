@@ -7,20 +7,20 @@ module.exports = {
 
   devServer: {
     port: "8080",
-    proxy: [
-      {
-        "/api": {
-          target: "www.example.com",
-          changeOrigin: true,
-          ws: true,
-        },
-      },
-      {
-        context: ["/auth", "/other"],
-        target: "www.other.com",
-        changeOrigin: true,
-      },
-    ],
+    // proxy: [
+    //   {
+    //     "/api": {
+    //       target: "www.example.com",
+    //       changeOrigin: true,
+    //       ws: true,
+    //     },
+    //   },
+    //   {
+    //     context: ["/auth", "/other"],
+    //     target: "www.other.com",
+    //     changeOrigin: true,
+    //   },
+    // ],
   },
   chainWebpack: (config) => {
     // set svg-sprite-loader
