@@ -20,6 +20,7 @@ instance.interceptors.request.use(
       // 类型 'application/x-www-form-urlencoded;'
       config.data = Qs.stringify(config.data);
     }
+    // console.log("http-config:", config);
     return config;
   },
   function (error) {
@@ -32,7 +33,7 @@ instance.interceptors.request.use(
 instance.interceptors.response.use(
   function (response) {
     // 对响应数据做处理
-    return response;
+    return response.data;
   },
   function (error) {
     // 对响应错误做处理...

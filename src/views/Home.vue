@@ -8,7 +8,7 @@
     >
     </v-nav-bar>
     <van-uploader />
-    <div style="" class="div">
+    <div style="" class="div" @click="svgClick">
       <svg-icon iconClass="icon" class="icon-class" />
     </div>
   </div>
@@ -18,6 +18,8 @@
 // @ is an alias to /src
 import vNavBar from "@/components/nav-bar";
 import { Uploader as vanUploader } from "vant";
+import { login } from "@/api/index.js";
+
 export default {
   name: "Home",
   components: {
@@ -30,6 +32,12 @@ export default {
     },
     onClickRight() {
       console.log("icon click");
+    },
+    svgClick() {
+      console.log("click");
+      login().then((res) => {
+        console.log(res);
+      });
     },
   },
 };
