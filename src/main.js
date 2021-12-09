@@ -10,7 +10,7 @@ import "amfe-flexible";
 import "@/svgIcons/index.js";
 
 // 不使用node开启服务
-// import "@/api/mock/index.js";
+import "@/api/mock/index.js";
 
 new Vue({
   router,

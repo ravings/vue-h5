@@ -19,7 +19,25 @@ export default {
     },
   },
   loginOut: {
-    url: "/api/loginOut",
+    url: "/api/searchBook",
     type: "get",
+    response: {
+      status: 200,
+      message: "success",
+      data: {
+        total: 100,
+        "list|10": [
+          {
+            // bookId: "@guid",
+            "bookId|30000-40000": 31897,
+            author: "@cname",
+            "chapterStatus|1": ["END", "SERIALIZE"],
+            desc: "@csentence",
+            "categoryName|1": ["都市小说", "历史小说", "其他小说"],
+            title: "@ctitle",
+          },
+        ],
+      },
+    },
   },
 };

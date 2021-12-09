@@ -2,7 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 
-import PageOne from "@/views/page-one/index.vue";
+import Book from "@/views/book/search.vue";
+import demo1 from "@/views/demo/demo-1.vue";
 
 Vue.use(VueRouter);
 
@@ -13,9 +14,14 @@ const routes = [
     component: Home,
   },
   {
-    path: "/PageOne",
-    name: "PageOne",
-    component: PageOne,
+    path: "/Book",
+    name: "Book",
+    component: Book,
+  },
+  {
+    path: "/demo1",
+    name: "demo1",
+    component: demo1,
   },
   {
     path: "/about",

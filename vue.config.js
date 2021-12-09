@@ -8,12 +8,19 @@ module.exports = {
   devServer: {
     port: "8080",
     proxy: {
-    //   "/api": {
-    //     target: "http://localhost:8090",
-    //     changeOrigin: true,
-    //     ws: true,
-    //   },
-    // },
+      "/app": {
+        target: "http://yuenov.com:15555",
+        // http://44.231.134.142:19999
+        changeOrigin: true,
+        ws: true,
+      },
+      "/file": {
+        target: "http://pt.yuenov.com:15555",
+        // http://44.231.134.142:19999
+        changeOrigin: true,
+        ws: true,
+      },
+    },
   },
   chainWebpack: (config) => {
     // set svg-sprite-loader
